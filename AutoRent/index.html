@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoRent - Wheelz On</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+<!-- Hero Section -->
+<section class="hero-section">
+    <!-- Navbar moved inside hero section -->
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assests/logo.png" alt="WheelzOn Logo" width="40" height="40" class="me-2">
+                Wheelz On
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Vehicles 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Luxury Cars</a></li>
+                            <li><a class="dropdown-item" href="#">SUVs</a></li>
+                            <li><a class="dropdown-item" href="#">Sports Cars</a></li>
+                            <li><a class="dropdown-item" href="#">Electric Vehicles</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Rent Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background -->
+    <div class="hero-background">
+        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" alt="Luxury Car" class="hero-image">
+        <div class="hero-overlay"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="hero-content text-center">
+                    <h1 class="hero-title">Experience Luxury on Wheels</h1>
+                    <p class="hero-description">Discover our premium collection of luxury cars available for rent. From sleek sports cars to elegant sedans, we have the perfect vehicle for every occasion.</p>
+                    
+                    <div class="search-container">
+                        <div class="input-group search-group">
+                            <input type="text" class="form-control search-input" placeholder="Search for your dream car..." readonly>
+                            <button class="btn search-btn" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Interactive Hotspot -->
+    <div class="hotspot" onclick="toggleColorTooltip()">
+        <div class="hotspot-inner"></div>
+    </div>
+    
+    <!-- Color Selection Tooltip -->
+    <div class="color-tooltip" id="colorTooltip">
+        <div class="color-selection">
+            <div class="color-circle" data-color="orange" onclick="selectColor('orange')"></div>
+            <div class="color-circle" data-color="blue" onclick="selectColor('blue')"></div>
+            <div class="color-circle" data-color="gray" onclick="selectColor('gray')"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Why Choosing Us Section -->
+    <section class="why-choosing-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-heading">
+                        <h2 class="why-title">
+                            <span class="why-line-1">Why</span>
+                            <span class="why-line-2">Choosing Us</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="feature-card">
+                                <h3 class="feature-title">Luxury Facilities</h3>
+                                <p class="feature-description">At WheelzOn, we believe every journey should feel like a premium experience. Our cars come with modern interiors, advanced features, and the comfort you deserve, making every ride stylish and memorable.</p>
+                                <a href="#" class="more-info-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="feature-card">
+                                <h3 class="feature-title">Affordable Price</h3>
+                                <p class="feature-description">We combine quality with affordability so you can enjoy the best cars without overspending. With transparent pricing and no hidden costs, WheelzOn ensures true value for your money.</p>
+                                <a href="#" class="more-info-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="feature-card">
+                                <h3 class="feature-title">Many Choices</h3>
+                                <p class="feature-description">Whether you need an economy car for daily use, a luxury ride for special occasions, an SUV for family trips, or even a sports car for thrill – WheelzOn has it all. Our wide fleet guarantees the perfect car for every need.</p>
+                                <a href="#" class="more-info-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Selling Products Section -->
+    <section class="best-selling-products">
+        <div class="container">
+            <h2 class="section-title text-center">Best Selling Cars</h2>
+            
+            <!-- Category Filter Tabs -->
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Cars</button>
+                <button class="category-tab" data-category="luxury">Luxury</button>
+                <button class="category-tab" data-category="sports">Sports</button>
+                <button class="category-tab" data-category="suv">SUV</button>
+            </div>
+            
+            <!-- Products Container -->
+           <div class="products-carousel">
+  <!-- Left Arrow -->
+  <button class="carousel-arrow carousel-prev" onclick="showPrevProducts()">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+
+  <div class="products-container">
+    <div class="row" id="productsRow">
+      
+      <!-- Product 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="luxury">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&q=80" alt="Mercedes S-Class">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Mercedes S-Class</h3>
+            <p class="product-category">LUXURY</p>
+            <div class="product-price">Rs 20000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="sports">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80" alt="Porsche 911">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Porsche 911</h3>
+            <p class="product-category">SPORTS</p>
+            <div class="product-price">Rs 24000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="suv">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=500&q=80" alt="Range Rover Sport">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Range Rover Sport</h3>
+            <p class="product-category">SUV</p>
+            <div class="product-price">Rs 25000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="luxury">
+          <div class="product-image">
+            <img src="assests/bmwi7.png" alt="BMW 7 Series">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">BMW 7 Series</h3>
+            <p class="product-category">LUXURY</p>
+            <div class="product-price">Rs 30000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="luxury">
+          <div class="product-image">
+            <img src="assests/bmw3.png" alt="BMW 3 Series">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">BMW 3 Series</h3>
+            <p class="product-category">LUXURY</p>
+            <div class="product-price">Rs 28000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="sports">
+          <div class="product-image">
+            <img src="assests/mgcyberstar.png" alt="MG Cyber Star">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">MG Cyber Star</h3>
+            <p class="product-category">SPORTS</p>
+            <div class="product-price">Rs 23000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="suv">
+          <div class="product-image">
+            <img src="assests/sportage.png" alt="Sportage">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Sportage</h3>
+            <p class="product-category">SUV</p>
+            <div class="product-price">Rs 13000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="suv">
+          <div class="product-image">
+            <img src="assests/landcruiser.png" alt="Land Cruiser">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Land Cruiser</h3>
+            <p class="product-category">SUV</p>
+            <div class="product-price">Rs 15000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="product-card" data-category="sports">
+          <div class="product-image">
+            <img src="assests/civic.png" alt="Civic">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Civic</h3>
+            <p class="product-category">SPORTS</p>
+            <div class="product-price">Rs 10000/day</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="view-bar">
+        <a href="#" class="more-info-link">
+            View All <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <!-- Right Arrow -->
+  <button class="carousel-arrow carousel-next" onclick="showNextProducts()">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>
+
+</div>
+    </section>
+
+    <!-- We Provide You The Best Experience Section -->
+    <section class="best-experience">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="experience-image-container">
+                        <div class="experience-image">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luxury Car" onerror="this.src='https://via.placeholder.com/600x400/f8f9fa/666?text=Luxury+Car'">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-content">
+                        <div class="experience-badge">RENTAL CARS</div>
+                        <h2 class="experience-title">
+                            <span class="experience-line-1">We Provide You The</span>
+                            <span class="experience-line-2">Best Experience</span>
+                        </h2>
+                        <p class="experience-description">Experience hassle-free travel with our wide range of rental cars. From compact and fuel-efficient models to spacious SUVs and stylish sedans, we provide vehicles that suit every journey and budget. With affordable rates, easy booking, and reliable service, your perfect ride is always ready with WheelzOn.</p>
+                        <a href="#" class="experience-link">
+                            Explore Cars
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Car Collection Section -->
+    <section class="materials-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="materials-content">
+                        <div class="materials-badge">PREMIUM CARS</div>
+                        <h2 class="materials-title">
+                            <span class="materials-line-1">Luxury Cars,</span>
+                            <span class="materials-line-2">Affordable Rentals</span>
+                        </h2>
+                        <p class="materials-description"> At WheelzOn, we bring you a premium collection of cars with modern design, luxury interiors, and top performance all at competitive rental prices. Experience comfort and style in every ride.</p>
+                        <a href="#" class="materials-link">
+                            Explore Premium Cars
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="materials-images">
+                        <div class="left-column">
+                            <div class="image-top">
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Porsche 911 Sports Car" onerror="this.src='https://via.placeholder.com/400x300/f8f9fa/666?text=Porsche+911'">
+                            </div>
+                            <div class="image-middle">
+                                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Luxury SUV" onerror="this.src='https://via.placeholder.com/400x500/f8f9fa/666?text=Luxury+SUV'">
+                            </div>
+                        </div>
+                        <div class="image-bottom">
+                            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Luxury Sedan" onerror="this.src='https://via.placeholder.com/400x500/f8f9fa+Sedan'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="testimonials-badge">TESTIMONIALS</div>
+                <h2 class="testimonials-title">Our Client Reviews</h2>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <button class="carousel-arrow carousel-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="testimonial-background">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Modern Living Room" onerror="this.src='https://via.placeholder.com/400x500/f8f9fa/666?text=Living+Room'">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="profile-picture">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Bang Upin" onerror="this.src='https://via.placeholder.com/80x80/f8f9fa/666?text=BU'">
+                            </div>
+                            <h3 class="client-name">Ahmed Raza</h3>
+                            <p class="client-occupation">Bussiness Man</p>
+                            <p class="testimonial-quote">"I rented an SUV for a family trip and it was perfect. Spacious, reliable, and the customer support was great."</p>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-background">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Minimalist Room" onerror="this.src='https://via.placeholder.com/400x500/f8f9fa/666?text=Minimalist'">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="profile-picture">
+                                <img src="assests/pfp.png" alt="profile-picture" onerror="this.src='https://via.placeholder.com/80x80/f8f9fa/666?text=IS'">
+                            </div>
+                            <h3 class="client-name">Laiba Arif</h3>
+                            <p class="client-occupation">Professional Women</p>
+                            <p class="testimonial-quote">"Amazing service! The car was clean, comfortable, and affordable. WheelzOn truly delivers luxury at the right price."</p>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-background">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Cozy Room" onerror="this.src='https://via.placeholder.com/400x500/f8f9fa/666?text=Cozy+Room'">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="profile-picture">
+                                <img src="assests/pfp.png" alt="profile-picture" onerror="this.src='https://via.placeholder.com/80x80/f8f9fa/666?text=MI'">
+                        </div>
+                            <h3 class="client-name">Maryam Zehra</h3>
+                            <p class="client-occupation">House Wife</p>
+                            <p class="testimonial-quote">"WheelzOn gave me the best rental experience ever. Many car choices and transparent pricing – I’ll definitely book again."</p>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-background">
+                            <img src="assests/4card.png" alt="Client 4">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="profile-picture">
+                                <img src="assests/4cardimg.png" alt="Client 4">
+                            </div>
+                            <h3 class="client-name">Imran Qureshi</h3>
+                                <p class="client-occupation">Traveler</p>   
+                                <p class="testimonial-quote">"The booking was quick and hassle free,and the car quality was excellent. Clean,Comfortable,and reliable"</p>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-background">
+                            <img src="assests/5card.png" alt="Client 5">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="profile-picture">
+                                <img src="assests/pfp.png" alt="Client 5">
+                            </div>
+                            <h3 class="client-name">Hina Javed</h3>
+                            <p class="client-occupation">Doctor</p>
+                            <p class="testimonial-quote">"Very affordable.The car was well maintained, and the experience was smooth. I’ll Definitely rent again."</p>
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>      
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+                <button class="carousel-arrow carousel-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Section - Company Information -->
+                <div class="col-lg-4">
+                    <div class="footer-company">
+                        <h3 class="footer-logo d-flex align-items-center">
+                            <img src="assests/bottomlogo.png" alt="Wheelz On Logo" width="70" height="50" class="me-3">
+                                Wheelz On
+                            </h3>
+                        <p class="footer-description">is your trusted car rental partner, offering a wide range of vehicles to match every journey. Whether you need an economy car for daily use, a luxury ride for special occasions, an SUV for family trips, or a sports car for thrill, WheelzOn has it all. With affordable prices, modern interiors, and well maintained vehicles, we ensure comfort, style, and reliability every time you drive with us. Our goal is to make car rental simple, modern, and hassle-free for everyone.</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Sections - Navigation/Links -->
+                <div class="col-lg-8">
+                    <div class="row">
+                        <!-- Services Column -->
+                        <div class="col-md-4">
+                            <div class="footer-links">
+                                <h4 class="footer-heading">Services</h4>
+                                <ul class="footer-list">
+                                    <li><a href="#">Rental Cars</a></li>
+                                    <li><a href="#">Corporate/Business Rentals</a></li>
+                                    <li><a href="#">Tour Packages</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Cars Column -->
+                        <div class="col-md-4">
+                            <div class="footer-links">
+                                <h4 class="footer-heading">Cars</h4>
+                                <ul class="footer-list">
+                                    <li><a href="#">Luxury</a></li>
+                                    <li><a href="#">Sports</a></li>
+                                    <li><a href="#">All</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Follow Us Column -->
+                        <div class="col-md-4">
+                            <div class="footer-links">
+                                <h4 class="footer-heading">Follow Us</h4>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-twitter"></i>
+                                            Twitter
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-instagram"></i>
+                                            Instagram
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section - Legal Links -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-copyright-mobile">Wheelz On Copyright © 2025</div>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-legal">
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+<script>
+// Initialize tooltips
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Initialize search functionality
+    initializeSearch();
+    
+    // Initialize color selection
+    initializeColorSelection();
+    
+    // Initialize cart functionality
+    initializeCart();
+    
+    // Initialize products functionality
+    initializeProducts();
+    
+    // Initialize smooth scrolling
+    initializeSmoothScrolling();
+    
+    // Initialize navbar effects
+    initializeNavbarEffects();
+    
+    // Initialize testimonials carousel
+    initializeTestimonialsCarousel();
+});
+
+// Search functionality
+function initializeSearch() {
+    const searchInput = document.querySelector('.search-input');
+    const searchBtn = document.querySelector('.search-btn');
+    
+    if (searchInput && searchBtn) {
+        // Make search input interactive when clicked
+        searchInput.addEventListener('click', function() {
+            this.removeAttribute('readonly');
+            this.focus();
+            this.style.caretColor = '#ffffff';
+        });
+        
+        // Search on button click
+        searchBtn.addEventListener('click', function() {
+            performSearch(searchInput.value);
+        });
+        
+        // Search on Enter key press
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch(searchInput.value);
+            }
+        });
+        
+        // Real-time search suggestions
+        searchInput.addEventListener('input', function() {
+            if (searchInput.value.length > 2) {
+                showSearchSuggestions(searchInput.value);
+            } else {
+                hideSearchSuggestions();
+            }
+        });
+        
+        // Reset to readonly when search is complete
+        searchInput.addEventListener('blur', function() {
+            if (this.value.trim() === '') {
+                this.setAttribute('readonly', '');
+                this.style.caretColor = 'transparent';
+            }
+        });
+    }
+}
+
+function performSearch(query) {
+    if (query.trim() === '') {
+        alert('Please enter a search term');
+        return;
+    }
+    
+    // Simulate search functionality
+    console.log('Searching for:', query);
+    
+    // You can implement actual search logic here
+    // For now, we'll show a success message
+    showNotification(`Searching for: ${query}`, 'success');
+    
+    // Clear search input
+    document.querySelector('.search-input').value = '';
+}
+
+function showSearchSuggestions(query) {
+    // Create or update search suggestions dropdown
+    let suggestionsContainer = document.querySelector('.search-suggestions');
+    
+    if (!suggestionsContainer) {
+        suggestionsContainer = document.createElement('div');
+        suggestionsContainer.className = 'search-suggestions';
+        suggestionsContainer.style.cssText = `
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #2a2a2a;
+            border: 1px solid #3a3a3a;
+            border-radius: 8px;
+            margin-top: 5px;
+            z-index: 1000;
+            max-height: 200px;
+            overflow-y: auto;
+        `;
+        
+        const searchContainer = document.querySelector('.search-container');
+        searchContainer.style.position = 'relative';
+        searchContainer.appendChild(suggestionsContainer);
+    }
+    
+    // Sample suggestions based on query
+    const suggestions = getSearchSuggestions(query);
+    
+    suggestionsContainer.innerHTML = suggestions.map(suggestion => 
+        `<div class="suggestion-item" style="padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #3a3a3a; color: #ffffff; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#3a3a3a'" onmouseout="this.style.backgroundColor='transparent'" onclick="selectSuggestion('${suggestion}')">${suggestion}</div>`
+    ).join('');
+    
+    suggestionsContainer.style.display = 'block';
+}
+
+function hideSearchSuggestions() {
+    const suggestionsContainer = document.querySelector('.search-suggestions');
+    if (suggestionsContainer) {
+        suggestionsContainer.style.display = 'none';
+    }
+}
+
+function selectSuggestion(suggestion) {
+    document.querySelector('.search-input').value = suggestion;
+    hideSearchSuggestions();
+    performSearch(suggestion);
+}
+
+function getSearchSuggestions(query) {
+    const allSuggestions = [
+        'Mercedes-Benz S-Class',
+        'BMW 7 Series',
+        'Audi A8',
+        'Range Rover Sport',
+        'Porsche 911',
+        'Ferrari F8',
+        'Tesla Model S',
+        'Electric Vehicles',
+        'Luxury Sedans',
+        'Sports Cars',
+        'SUVs',
+        'Compact Cars'
+    ];
+    
+    return allSuggestions.filter(suggestion => 
+        suggestion.toLowerCase().includes(query.toLowerCase())
+    ).slice(0, 5);
+}
+
+// Color selection functionality
+function initializeColorSelection() {
+    const colorCircles = document.querySelectorAll('.color-circle');
+    
+    colorCircles.forEach(circle => {
+        circle.addEventListener('click', function() {
+            // Remove selected class from all circles
+            colorCircles.forEach(c => c.classList.remove('color-selected'));
+            
+            // Add selected class to clicked circle
+            this.classList.add('color-selected');
+            
+            // Get the color value
+            const color = this.getAttribute('data-color');
+            
+            // Handle color selection (you can customize this)
+            handleColorSelection(color);
+        });
+    });
+}
+
+function handleColorSelection(color) {
+    console.log('Selected color:', color);
+    
+    // You can implement color-specific functionality here
+    // For example, filtering vehicles by color
+    showNotification(`Selected color: ${color}`, 'success');
+    
+    // Example: Change vehicle display based on color
+    if (color === 'orange') {
+        // Show luxury vehicles
+        filterVehiclesByCategory('luxury');
+    } else if (color === 'blue') {
+        // Show electric vehicles
+        filterVehiclesByCategory('electric');
+    } else if (color === 'gray') {
+        // Show all vehicles
+        filterVehiclesByCategory('all');
+    }
+    
+    // Close tooltip after selection
+    const colorTooltip = document.querySelector('.color-tooltip');
+    if (colorTooltip) {
+        setTimeout(() => {
+            colorTooltip.classList.remove('show');
+        }, 1000);
+    }
+}
+
+function filterVehiclesByCategory(category) {
+    const vehicleCards = document.querySelectorAll('.vehicle-card');
+    
+    vehicleCards.forEach(card => {
+        if (category === 'all') {
+            card.style.display = 'block';
+            card.style.opacity = '1';
+        } else {
+            // Simple category filtering (you can enhance this)
+            const vehicleType = card.querySelector('p').textContent.toLowerCase();
+            if (vehicleType.includes(category)) {
+                card.style.display = 'block';
+                card.style.opacity = '1';
+            } else {
+                card.style.opacity = '0.3';
+            }
+        }
+    });
+}
+
+// Cart functionality
+function initializeCart() {
+    const cartIcon = document.querySelector('.cart-icon');
+    const cartCount = document.querySelector('.cart-count');
+    
+    if (cartIcon && cartCount) {
+        cartIcon.addEventListener('click', function() {
+            showCart();
+        });
+        
+        // Initialize cart count
+        updateCartCount(0);
+    }
+    
+    // Add event listeners to "Rent Now" buttons
+    const rentButtons = document.querySelectorAll('.btn-warning');
+    rentButtons.forEach(button => {
+        if (button.textContent === 'Rent Now') {
+            button.addEventListener('click', function() {
+                const vehicleCard = this.closest('.vehicle-card');
+                const vehicleName = vehicleCard.querySelector('h5').textContent;
+                const vehiclePrice = vehicleCard.querySelector('.price').textContent;
+                
+                addToCart(vehicleName, vehiclePrice);
+            });
+        }
+    });
+}
+
+function addToCart(vehicleName, vehiclePrice) {
+    // Get current cart count
+    let currentCount = parseInt(document.querySelector('.cart-count').textContent);
+    
+    // Increment count
+    currentCount++;
+    
+    // Update cart count display
+    updateCartCount(currentCount);
+    
+    // Show success message
+    showNotification(`${vehicleName} added to cart!`, 'success');
+    
+    // You can implement actual cart storage here
+    // For now, we'll use localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    cartItems.push({
+        name: vehicleName,
+        price: vehiclePrice,
+        date: new Date().toISOString()
+    });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+
+function updateCartCount(count) {
+    const cartCount = document.querySelector('.cart-count');
+    if (cartCount) {
+        cartCount.textContent = count;
+        cartCount.style.display = count > 0 ? 'flex' : 'none';
+    }
+}
+
+function showCart() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    
+    if (cartItems.length === 0) {
+        showNotification('Your cart is empty', 'info');
+        return;
+    }
+    
+    // Create cart modal content
+    let cartContent = '<h4>Your Cart</h4>';
+    cartItems.forEach((item, index) => {
+        cartContent += `
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #3a3a3a;">
+                <span>${item.name}</span>
+                <div>
+                    <span style="color: #ff6b35; margin-right: 15px;">${item.price}</span>
+                    <button onclick="removeFromCart(${index})" style="background: #dc3545; border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Remove</button>
+                </div>
+            </div>
+        `;
+    });
+    
+    cartContent += `
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="checkout()" style="background: #ff6b35; border: none; color: white; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold;">Checkout</button>
+        </div>
+    `;
+    
+    showModal('Shopping Cart', cartContent);
+}
+
+function removeFromCart(index) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    cartItems.splice(index, 1);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    // Update cart count
+    updateCartCount(cartItems.length);
+    
+    // Refresh cart display
+    showCart();
+}
+
+function checkout() {
+    showNotification('Checkout functionality coming soon!', 'info');
+    hideModal();
+}
+
+// Smooth scrolling
+function initializeSmoothScrolling() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+}
+
+// Navbar effects
+function initializeNavbarEffects() {
+    const navbar = document.querySelector('.navbar');
+    
+    // Keep navbar always transparent
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.boxShadow = 'none';
+}
+
+// Utility functions
+function showNotification(message, type = 'info') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.style.cssText = 
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#28a745' : type === 'error' ? '#dc3545' : '#ff6b35'};
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+        max-width: 300px;
+        word-wrap: break-word;
+    `;
+    notification.textContent = message;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(400px)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
+}
+
+function showModal(title, content) {
+    // Remove existing modal
+    const existingModal = document.querySelector('.custom-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'custom-modal';
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+    `;
+    
+    modal.innerHTML = 
+        <div style="background: #2a2a2a; border-radius: 15px; padding: 30px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; border: 1px solid #3a3a3a;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 style="color: #ffffff; margin: 0;">${title}</h3>
+                <button onclick="hideModal()" style="background: none; border: none; color: #ffffff; font-size: 24px; cursor: pointer;">&times;</button>
+            </div>
+            <div style="color: #ffffff;">
+                ${content}
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+}
+
+function hideModal() {
+    const modal = document.querySelector('.custom-modal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
+// Hotspot interactions
+document.addEventListener('DOMContentLoaded', function() {
+    const hotspot = document.querySelector('.hotspot');
+    const colorTooltip = document.querySelector('.color-tooltip');
+    
+    if (hotspot && colorTooltip) {
+        // Toggle tooltip on hotspot click
+        hotspot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            colorTooltip.classList.toggle('show');
+        });
+        
+        // Close tooltip when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hotspot.contains(e.target)) {
+                colorTooltip.classList.remove('show');
+            }
+        });
+        
+        // Handle color selection
+        const colorCircles = colorTooltip.querySelectorAll('.color-circle');
+        colorCircles.forEach(circle => {
+            circle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // Remove selected class from all circles
+                colorCircles.forEach(c => {
+                    c.classList.remove('color-selected');
+                    const icon = c.querySelector('i');
+                    if (icon) icon.remove();
+                });
+                
+                // Add selected class to clicked circle
+                this.classList.add('color-selected');
+                this.innerHTML = '<i class="fas fa-check text-white"></i>';
+                
+                // Get selected color
+                const selectedColor = this.getAttribute('data-color');
+                handleColorSelection(selectedColor);
+            });
+        });
+    }
+});
+
+// Initialize product tabs and pagination
+function initializeProducts() {
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const productCards = document.querySelectorAll('.product-card');
+    const paginationLinks = document.querySelectorAll('.pagination .page-link');
+    
+    // Category tab functionality
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // Update active tab
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter products by category
+            filterProductsByCategory(category);
+            
+            // Show notification
+            showNotification(`Showing ${category} cars`, 'info');
+        });
+    });
+    
+    // Pagination functionality
+    paginationLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Update active page
+            paginationLinks.forEach(l => l.parentElement.classList.remove('active'));
+            this.parentElement.classList.add('active');
+            
+            const page = this.getAttribute('data-page');
+            if (page) {
+                showNotification(`Showing page ${page}`, 'info');
+                // In a real app, you would load products for this page
+                console.log(`Loading page ${page}`);
+            }
+        });
+    });
+}
+
+// Filter products by category
+function filterProductsByCategory(category) {
+    const productCards = document.querySelectorAll('.product-card');
+    
+    productCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        
+        if (cardCategory === category) {
+            card.style.display = 'block';
+            // Add fade-in animation
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Color selection functionality
+function selectColor(color) {
+    // Remove selected class from all circles
+    const colorCircles = document.querySelectorAll('.color-circle');
+    colorCircles.forEach(c => c.classList.remove('color-selected'));
+    
+    // Add selected class to clicked circle
+    event.target.closest('.color-circle').classList.add('color-selected');
+    
+    // Store selected color
+    window.selectedColor = color;
+    
+    // Update checkmark
+    colorCircles.forEach(c => {
+        const icon = c.querySelector('i');
+        if (icon) icon.remove();
+    });
+    
+    const selectedCircle = event.target.closest('.color-circle');
+    selectedCircle.innerHTML = '<i class="fas fa-check text-white"></i>';
+}
+
+function proceedWithColor() {
+    const selectedColor = window.selectedColor || 'orange';
+    
+    // Show vehicle options based on color
+    const modalContent = `
+        <div style="text-align: center;">
+            <h4 style="color: #ff6b35; margin-bottom: 20px;">Available Vehicles</h4>
+            <p style="margin-bottom: 20px;">Showing vehicles available in ${selectedColor} color:</p>
+            
+            <div style="display: grid; gap: 15px; margin-bottom: 20px;">
+                <div style="background: #3a3a3a; padding: 15px; border-radius: 8px; border: 1px solid #4a4a4a;">
+                    <h5 style="color: #ffffff; margin-bottom: 10px;">Mercedes-Benz S-Class</h5>
+                    <p style="color: #cccccc; margin-bottom: 10px;">Luxury Sedan - ${selectedColor} color</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #ff6b35; font-weight: bold;">$150/day</span>
+                        <button onclick="addToCart('Mercedes-Benz S-Class', '$150/day')" style="background: #ff6b35; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">Rent Now</button>
+                    </div>
+                </div>
+                
+                <div style="background: #3a3a3a; padding: 15px; border-radius: 8px; border: 1px solid #4a4a4a;">
+                    <h5 style="color: #ffffff; margin-bottom: 10px;">BMW 7 Series</h5>
+                    <p style="color: #cccccc; margin-bottom: 10px;">Luxury Sedan - ${selectedColor} color</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #ff6b35; font-weight: bold;">$180/day</span>
+                        <button onclick="addToCart('BMW 7 Series', '$180/day')" style="background: #ff6b35; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">Rent Now</button>
+                    </div>
+                </div>
+                
+                <div style="background: #3a3a3a; padding: 15px; border-radius: 8px; border: 1px solid #4a4a4a;">
+                    <h5 style="color: #ffffff; margin-bottom: 10px;">Audi A8</h5>
+                    <p style="color: #cccccc; margin-bottom: 10px;">Luxury Sedan - ${selectedColor} color</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #ff6b35; font-weight: bold;">$160/day</span>
+                        <button onclick="addToCart('Audi A8', '$160/day')" style="background: #ff6b35; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    showModal('Available Vehicles', modalContent);
+}
+
+// Add some animation effects
+window.addEventListener('load', function() {
+    // Animate hero content on page load
+    const heroTitle = document.querySelector('.hero-title');
+    const heroDescription = document.querySelector('.hero-description');
+    const searchContainer = document.querySelector('.search-container');
+    
+    if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transform = 'translateY(30px)';
+        heroTitle.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+        }, 300);
+    }
+    
+    if (heroDescription) {
+        heroDescription.style.opacity = '0';
+        heroDescription.style.transform = 'translateY(30px)';
+        heroDescription.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            heroDescription.style.opacity = '1';
+            heroDescription.style.transform = 'translateY(0)';
+        }, 600);
+    }
+    
+    if (searchContainer) {
+        searchContainer.style.opacity = '0';
+        searchContainer.style.transform = 'translateY(30px)';
+        searchContainer.style.transition = 'all 0.8s ease';
+        
+        setTimeout(() => {
+            searchContainer.style.opacity = '1';
+            searchContainer.style.transform = 'translateY(0)';
+        }, 900);
+    }
+});
+
+// Testimonials Carousel Functionality
+function initializeTestimonialsCarousel() {
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+    const testimonialsPerPage = 3;
+
+    if (testimonialCards.length === 0) return;
+
+    // Show first 3 testimonials initially
+    showTestimonials(currentIndex);
+
+    // Previous button click
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            if (testimonialCards.length > testimonialsPerPage) {
+                currentIndex = Math.max(0, currentIndex - testimonialsPerPage);
+                showTestimonials(currentIndex);
+            }
+        });
+    }
+
+    // Next button click
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            if (testimonialCards.length > testimonialsPerPage) {
+                currentIndex = Math.min(testimonialCards.length - testimonialsPerPage, currentIndex + testimonialsPerPage);
+                showTestimonials(currentIndex);
+            }
+        });
+    }
+
+    function showTestimonials(startIndex) {
+        // Show all testimonials initially (for 3 or fewer testimonials)
+        if (testimonialCards.length <= testimonialsPerPage) {
+            testimonialCards.forEach(card => {
+                card.style.display = 'block';
+            });
+            return;
+        }
+
+        // Hide all testimonials first
+        testimonialCards.forEach(card => {
+            card.style.display = 'none';
+        });
+
+        // Show testimonials for current page
+        for (let i = startIndex; i < startIndex + testimonialsPerPage && i < testimonialCards.length; i++) {
+            testimonialCards[i].style.display = 'block';
+        }
+
+        // Update pagination indicators
+        updatePaginationIndicators(startIndex);
+    }
+
+    function updatePaginationIndicators(startIndex) {
+        const totalPages = Math.ceil(testimonialCards.length / testimonialsPerPage);
+        const currentPage = Math.floor(startIndex / testimonialsPerPage) + 1;
+        console.log(`Showing page ${currentPage} of ${totalPages}`);
+        
+        // Update button states
+        if (prevBtn) {
+            prevBtn.style.opacity = startIndex === 0 ? '0.5' : '1';
+            prevBtn.style.pointerEvents = startIndex === 0 ? 'none' : 'auto';
+        }
+        
+        if (nextBtn) {
+            nextBtn.style.opacity = startIndex + testimonialsPerPage >= testimonialCards.length ? '0.5' : '1';
+            nextBtn.style.pointerEvents = startIndex + testimonialsPerPage >= testimonialCards.length ? 'none' : 'auto';
+        }
+    }
+}
+</script>
+</html>
